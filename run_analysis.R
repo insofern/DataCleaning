@@ -85,3 +85,4 @@ r1 == r2
 setkey(both_all, subject, activity, featDomain, featAcceleration, featInstrument, 
        featJerk, featMagnitude, featVariable, featAxis)
 Tidy <- both_all[, list(count = .N, average = mean(value)), by = key(both_all)]
+write.table(Tidy, file="tidy_table.txt", row.names = FALSE)
